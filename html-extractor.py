@@ -27,5 +27,8 @@ def extract_html():
         return f"Error: {e}"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Specify the desired port number here (e.g., 8000)
+    port = 8000
+    app.run(port=port,debug=True)
+    app.run()
 

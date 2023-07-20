@@ -6,8 +6,29 @@
 <body>
     <h1>Enter the URL to Extract HTML:</h1>
     <form action="/extract" method="post">
-        <input type="text" name="url" placeholder="Enter URL here" required>
+        <input type="text" name="url" placeholder="Enter URL here" required class="input">
         <input type="submit" value="Extract">
+ 
     </form>
+    <br>
+    <button class="clear">clear input</button>
+    <button class="copy">copy text</button>
+    <script>
+        // Get references to the input field and the clear button using querySelector
+        const clearButton = document.querySelector('.clear');
+        const inputField = document.querySelector('.input');
+        const copyButton = document.querySelector('.copy');
+      
+        clearButton.addEventListener("click", () => {
+          // Clear the input field's value when the "Clear" button is clicked
+          inputField.value = '';
+        });
+
+        copyButton.addEventListener("click", () => {
+    // Copy the text from the input field when the "Copy" button is clicked
+    inputField.select();
+    document.execCommand("copy");
+  });
+      </script>
 </body>
 </html>
